@@ -1,9 +1,11 @@
 package com.book.cart;
 
-import java.util.List;
-import java.util.ArrayList;
-import org.junit.Assert;
+import static org.hamcrest.CoreMatchers.is;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Assert;
 import org.junit.Test;
 
 public class BookCartTest {
@@ -16,7 +18,7 @@ public class BookCartTest {
 		
 		double amount = BookCart.calculatePrice(books);
 		
-		Assert.assertEquals(50.0, amount);
+		Assert.assertThat(50.0, is(amount));
 		
 	}
 
